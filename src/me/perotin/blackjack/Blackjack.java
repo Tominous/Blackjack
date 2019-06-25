@@ -91,7 +91,7 @@ public class Blackjack extends JavaPlugin {
 
     public BlackjackPlayer getPlayerFor(Player p){
 
-       //return players.stream().filter(p -> uuid.equals(p.getUuid())).collect(Collectors.toList()).get(0);
+       return players.stream().filter(p -> uuid.equals(p.getUuid())).collect(Collectors.toList()).get(0);
         if(!players.isEmpty()){
             for(BlackjackPlayer player : players){
                 if(player.getUuid().equals(p.getUniqueId())) return player;
